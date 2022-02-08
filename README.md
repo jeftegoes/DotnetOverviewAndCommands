@@ -35,3 +35,6 @@
   - dotnet new sln
 - Add project into a solution
   - dotnet sln add `<dotnet_project>` # Remember, he must exists .csproj file.
+
+## Tools
+dotnet tool install --global dotnet-aspnet-codegenerator --version X.X.X
