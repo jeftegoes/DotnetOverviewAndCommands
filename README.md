@@ -36,5 +36,9 @@
 - Add project into a solution
   - dotnet sln add `<dotnet_project>` # Remember, he must exists .csproj file.
 
+### Aspnet codegenerator commands
+
+- dotnet aspnet-codegenerator --project "D:\CSharp\DotnetDapperOverview\ExampleDapper" controller --force --controllerName CompanyController --model ExampleDapper.Models.Company --dataContext ExampleDapper.Data.ApplicationDbContext --relativeFolderPath Controllers --controllerNamespace ExampleDapper.Controllers
+
 ## Tools
 dotnet tool install --global dotnet-aspnet-codegenerator --version X.X.X
