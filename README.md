@@ -2,9 +2,14 @@
 
 ## Contents <!-- omit in toc -->
 
-## Commands
+- [1. Commands](#1-commands)
+  - [1.1. General commands](#11-general-commands)
+  - [1.2. Solution commands](#12-solution-commands)
 
-### General commands
+# 1. Commands
+
+## 1.1. General commands
+
 - Create a Web API into the project
   - dotnet new webapi –o `<output_path>`
 - Add reference to another ClassLib
@@ -25,12 +30,13 @@
   - dotnet publish -c Release
 - Verif if machines has https certificate valid
   - dotnet dev-certs https
-- Trust localhost certificate 
+- Trust localhost certificate
   - dotnet dev-certs https -t
 - List of tools installer with dotnet
   - dotnet tool list -g # -g appear globar
 
-### Solution commands
+## 1.2. Solution commands
+
 - Create a solution
   - dotnet new sln
 - Add project into a solution
