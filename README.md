@@ -5,6 +5,8 @@
 - [1. Commands](#1-commands)
   - [1.1. General commands](#11-general-commands)
   - [1.2. Solution commands](#12-solution-commands)
+  - [1.3. Aspnet codegenerator commands](#13-aspnet-codegenerator-commands)
+- [2. Tools](#2-tools)
 
 # 1. Commands
 
@@ -41,3 +43,11 @@
   - dotnet new sln
 - Add project into a solution
   - dotnet sln add `<dotnet_project>` # Remember, he must exists .csproj file.
+
+## 1.3. Aspnet codegenerator commands
+
+- dotnet aspnet-codegenerator --project "D:\CSharp\DotnetDapperOverview\ExampleDapper" controller --force --controllerName CompanyController --model ExampleDapper.Models.Company --dataContext ExampleDapper.Data.ApplicationDbContext --relativeFolderPath Controllers --controllerNamespace ExampleDapper.Controllers
+
+# 2. Tools
+
+- dotnet tool install --global dotnet-aspnet-codegenerator --version X.X.X
