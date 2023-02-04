@@ -36,6 +36,11 @@
   - dotnet dev-certs https -t
 - List of tools installer with dotnet
   - dotnet tool list -g # -g appear globar
+- Generate NuGet package
+  - dotnet pack
+  - **OR**
+  - Adding this tag to automatically generate package on build:
+    - <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
 ## 1.2. Solution commands
 
