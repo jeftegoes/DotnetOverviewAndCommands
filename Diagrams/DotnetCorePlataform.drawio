@@ -1,0 +1,25 @@
+<mxfile host="Electron" modified="2023-07-02T22:54:03.597Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.5.1 Chrome/112.0.5615.204 Electron/24.6.0 Safari/537.36" etag="UVNIF7EuE5reNwgh-uYD" version="21.5.1" type="device">
+  <diagram name="Page-1" id="mEusKW_PrOp-STl1MkUZ">
+    <mxGraphModel dx="2074" dy="854" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="fqY4UnkM25RQsTAREB7V-1" value="ASP. NET Core" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="270" y="290" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fqY4UnkM25RQsTAREB7V-2" value="Entity Framework Core" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="510" y="290" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fqY4UnkM25RQsTAREB7V-3" value="... Others Frameworks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="750" y="290" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fqY4UnkM25RQsTAREB7V-4" value="CoreFx" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="270" y="360" width="710" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fqY4UnkM25RQsTAREB7V-5" value="CoreCLR" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="270" y="400" width="710" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
