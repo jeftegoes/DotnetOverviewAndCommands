@@ -2,35 +2,64 @@
 
 ## Contents <!-- omit in toc -->
 
-- [1. Overview .NET Core](#1-overview-net-core)
-  - [1.1. Typical dotnet application](#11-typical-dotnet-application)
-  - [1.2. Why Microsoft created .NET Core?](#12-why-microsoft-created-net-core)
-  - [1.3. Why does it matter?](#13-why-does-it-matter)
-- [2. .NET Standard](#2-net-standard)
-  - [2.1. .NET Standard Why?](#21-net-standard-why)
-  - [2.2. Portable Class Library (PCL) and Shared Projects?](#22-portable-class-library-pcl-and-shared-projects)
-  - [2.3. .NET Standard 2.0](#23-net-standard-20)
-- [3. Deployments options](#3-deployments-options)
-  - [3.1. Self contained](#31-self-contained)
-  - [3.2. Framework Dependent](#32-framework-dependent)
-  - [3.3. Package Size](#33-package-size)
-- [4. Performance](#4-performance)
-  - [4.1. Measuring memory](#41-measuring-memory)
-- [5. Commands](#5-commands)
-  - [5.1. General commands](#51-general-commands)
-  - [5.2. Solution commands](#52-solution-commands)
-  - [5.3. Aspnet codegenerator commands](#53-aspnet-codegenerator-commands)
-- [6. Tools](#6-tools)
+- [1. What is C#](#1-what-is-c)
+- [2. What is .NET](#2-what-is-net)
+- [3. What is the difference between .NET Framework, .NET Core and .NET?](#3-what-is-the-difference-between-net-framework-net-core-and-net)
+- [4. How C# is compiled](#4-how-c-is-compiled)
+- [5. Typical dotnet application](#5-typical-dotnet-application)
+- [6. Why Microsoft created .NET?](#6-why-microsoft-created-net)
+  - [6.1. Why does it matter?](#61-why-does-it-matter)
+- [7. .NET Standard](#7-net-standard)
+  - [7.1. .NET Standard Why?](#71-net-standard-why)
+  - [7.2. Portable Class Library (PCL) and Shared Projects?](#72-portable-class-library-pcl-and-shared-projects)
+  - [7.3. .NET Standard 2.0](#73-net-standard-20)
+- [8. Deployments options](#8-deployments-options)
+  - [8.1. Self contained](#81-self-contained)
+  - [8.2. Framework Dependent](#82-framework-dependent)
+  - [8.3. Package Size](#83-package-size)
+- [9. Performance](#9-performance)
+  - [9.1. Measuring memory](#91-measuring-memory)
+- [10. Commands](#10-commands)
+  - [10.1. General commands](#101-general-commands)
+  - [10.2. Solution commands](#102-solution-commands)
+  - [10.3. Aspnet codegenerator commands](#103-aspnet-codegenerator-commands)
+- [11. Tools](#11-tools)
 
-# 1. Overview .NET Core
+# 1. What is C#
 
-## 1.1. Typical dotnet application
+- C# is a programming language.
+- Object Oriented.
+- Strongly typed.
+- Simple to use and general-purpose.
+- Some the things we can write in C#:
+  - **Backend Development** (API, EF Core, Linq, Async, OOP)
+  - **Front End** (ASP.Net, MVC, Razor, Blazor)
+  - **Mobile** (Maui, Xamarin)
+  - **Game** (Unity)
+  - **Desktop** (Maui, WinForms, WPF)
+
+# 2. What is .NET
+
+- A C# compiler.
+- A runtime to execute C# (Core CLR).
+- Libraries to provide out-of-the-box functionalities (BCL Functions).                                                                                                                                                                                                                                                                                                                                                        
+- A garbage collector to manage memory.
+- .NET (dotnet) is a framework for building applications on Windows, Linux and MAC OS.
+  - .NET is not limited to C# examples are F# or VB.NET.
+
+# 3. What is the difference between .NET Framework, .NET Core and .NET?
+
+![Dotnet timeline](/Images/DotnetTimeline.jpg)
+
+# 4. How C# is compiled
+
+# 5. Typical dotnet application
 
 - ![Typical dotnet application diagram](Images/TypicalDotnetApplication.png)
   - Tied to Windows and IIS.
   - First release: 2002 (no cloud, no Microservices).
 
-## 1.2. Why Microsoft created .NET Core?
+# 6. Why Microsoft created .NET?
 
 - New requirements:
   - Cross-platform.
@@ -40,13 +69,13 @@
 - **PERFORMANCE!!!!**
 - ![.NET Core diagram](Images/DotnetCorePlataform.png)
 
-## 1.3. Why does it matter?
+## 6.1. Why does it matter?
 
 - Almost zero framework overhead = almost zero overhead for your application.
-- It's a C# library built on top of .NET Core: you have the same platform available for your libraries and applications.
-- Many C# features and new .NET APIs were "invented" during the development of .NET Core and ASP.NET Core to achieve this performance.
+- It's a C# library built on top of .NET: you have the same platform available for your libraries and applications.
+- Many C# features and new .NET APIs were "invented" during the development of .NET and ASP.NET to achieve this performance.
 
-# 2. .NET Standard
+# 7. .NET Standard
 
 - Contract that defines an API surface.
 - Versions: 1.0 - 2.0.
@@ -54,38 +83,38 @@
 - ".NET" flavors implement the standard.
 - .NET Standard version are backward compatible.
 
-## 2.1. .NET Standard Why?
+## 7.1. .NET Standard Why?
 
 - Code sharing!
 - Target the standard - run everywhere.
 - Full framework, .NET Core, Mono (Xamarin): all support .NET Standard 2.0.
 - As a library author: you should target .NET Standard (and not e.g. .NET Core).
 
-## 2.2. Portable Class Library (PCL) and Shared Projects?
+## 7.2. Portable Class Library (PCL) and Shared Projects?
 
 - PCL and Shared Projects: Previous attempt to share code across .NET Platforms (e.g. Full Framework and Xamarin).
 - **Recommendation: use .NET Standard.**
 
-## 2.3. .NET Standard 2.0
+## 7.3. .NET Standard 2.0
 
 - ![.NET Standard 2.0 versions](/Images/DotnetStandardVersions.png)
 - Doubled the number of APIs.
 - Supports `mscorlib` based .NET Framework libs.
 
-# 3. Deployments options
+# 8. Deployments options
 
 - Self contained.
 - Framework Dependent or Shared Framework.
 - [.NET application publishing overview](https://learn.microsoft.com/en-us/dotnet/core/deploying/)
 
-## 3.1. Self contained
+## 8.1. Self contained
 
 - Contains the CLR.
 - No preinstalled framework needed.
 - Bigger deployment package which targets a specific OS (The executable is not cross-platform).
 - `dotnet publish --runtime win-x86 --self-contained true`
 
-## 3.2. Framework Dependent
+## 8.2. Framework Dependent
 
 - Only contains the application’s code.
 - Requires preinstalled .NET Core on the target machine.
@@ -94,17 +123,17 @@
 - **Default.**
 - `dotnet publish --runtime win-x86 --self-contained false`
 
-## 3.3. Package Size
+## 8.3. Package Size
 
 ![Package size difference](/Images/DeploymentOptionsPackageSize.png)
 
-# 4. Performance
+# 9. Performance
 
-## 4.1. Measuring memory
+## 9.1. Measuring memory
 
-# 5. Commands
+# 10. Commands
 
-## 5.1. General commands
+## 10.1. General commands
 
 - Create a Web API into the project
   - dotnet new webapi -o `<output_path>`
@@ -136,17 +165,17 @@
   - Adding this tag to automatically generate package on build:
     - <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
-## 5.2. Solution commands
+## 10.2. Solution commands
 
 - Create a solution
   - dotnet new sln
 - Add project into a solution
   - dotnet sln add `<dotnet_project>` # Remember, he must exists .csproj file.
 
-## 5.3. Aspnet codegenerator commands
+## 10.3. Aspnet codegenerator commands
 
 - dotnet aspnet-codegenerator --project "D:\CSharp\DotnetDapperOverview\ExampleDapper" controller --force --controllerName CompanyController --model ExampleDapper.Models.Company --dataContext ExampleDapper.Data.ApplicationDbContext --relativeFolderPath Controllers --controllerNamespace ExampleDapper.Controllers
 
-# 6. Tools
+# 11. Tools
 
 - dotnet tool install --global dotnet-aspnet-codegenerator --version X.X.X
