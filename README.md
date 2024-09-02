@@ -42,7 +42,7 @@
 
 - A C# compiler.
 - A runtime to execute C# (Core CLR).
-- Libraries to provide out-of-the-box functionalities (BCL Functions).                                                                                                                                                                                                                                                                                                                                                        
+- Libraries to provide out-of-the-box functionalities (BCL Functions).
 - A garbage collector to manage memory.
 - .NET (dotnet) is a framework for building applications on Windows, Linux and MAC OS.
   - .NET is not limited to C# examples are F# or VB.NET.

@@ -1,26 +1,31 @@
-## What is this projetct
+# 1. What is this projetct
 
 It is a small/simple example that implements Datatables "server side", in this example, shows how to call a store procedure into SqlServer(T-SQL) and return the data to frontend be to renderized by datatables using self metadata and options.
 
-## Back-end
+# 2. Back-end
 
 .Net Core 5.0 Web Mvc/Api
 
-## Front-end
+# 3. Front-end
 
 - Html
 - Razor
 
-## Libraries used
-### Front
+# 4. Libraries used
+
+## 4.1. Front
+
 - JQuery
 - Datatables
 
-### Backend
+## 4.2. Backend
+
 - Dapper
 
-## Database objects
-### Table
+# 5. Database objects
+
+## 5.1. Table
+
 ```
 DROP TABLE Customer
 GO
@@ -36,7 +41,8 @@ CREATE TABLE [dbo].[Customer](
 GO
 ```
 
-### Mass data
+## 5.2. Mass data
+
 ```
 TRUNCATE TABLE Customer
 DECLARE @customer INT = 0
@@ -51,7 +57,8 @@ BEGIN
 END
 ```
 
-## Procedure
+# 6. Procedure
+
 ```
 DROP PROCEDURE stpGetCustomers
 GO
@@ -70,35 +77,35 @@ BEGIN
 		City,
 		PostalCode,
 		Country,
-		count(CustomerID) OVER () AS FilterTotalCount 
+		count(CustomerID) OVER () AS FilterTotalCount
 	FROM
 		Customer
     WHERE
 		(
-			(  
-				@searchText <> '' AND	(	
+			(
+				@searchText <> '' AND	(
 											CustomerName LIKE '%' + @searchText + '%' OR
 											ContactName LIKE '%' + @searchText + '%'
 										)
 			) OR (@searchText = '')
-		)  
+		)
 	ORDER BY
 	CASE WHEN @sortOrder = 'Asc' THEN
 		CASE
 			WHEN @sortColumn = 1 THEN CustomerName
-			WHEN @sortColumn = 2 THEN ContactName 
-			WHEN @sortColumn = 3 THEN Address 
-			WHEN @sortColumn = 4 THEN City 
-			WHEN @sortColumn = 5 THEN PostalCode 
+			WHEN @sortColumn = 2 THEN ContactName
+			WHEN @sortColumn = 3 THEN Address
+			WHEN @sortColumn = 4 THEN City
+			WHEN @sortColumn = 5 THEN PostalCode
 		END
 	END ASC
 	, CASE WHEN @sortOrder = 'Desc' THEN
 		CASE
 			WHEN @sortColumn = 1 THEN CustomerName
-			WHEN @sortColumn = 2 THEN ContactName 
-			WHEN @sortColumn = 3 THEN Address 
-			WHEN @sortColumn = 4 THEN City 
-			WHEN @sortColumn = 5 THEN PostalCode  
+			WHEN @sortColumn = 2 THEN ContactName
+			WHEN @sortColumn = 3 THEN Address
+			WHEN @sortColumn = 4 THEN City
+			WHEN @sortColumn = 5 THEN PostalCode
 		END
 	END DESC
 	OFFSET @offsetValue ROWS
@@ -106,5 +113,6 @@ BEGIN
 END
 ```
 
-## Result of this project
+# 7. Result of this project
+
 ![ExampleDotnetDatatablesPagination](Images/FrontEnd.png)
