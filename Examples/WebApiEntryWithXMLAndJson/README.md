@@ -1,10 +1,10 @@
 # 1. What is this project
 
-This is a sample project showing how to accept body in format xml (application/xml) or json (application/json).
+- This is a sample project showing how to accept body in format xml (application/xml) or json (application/json).
 
 # 2. Project type console
 
-.NET 6.0
+- .NET 6.0
 
 # 3. How to test
 
@@ -12,10 +12,10 @@ This is a sample project showing how to accept body in format xml (application/x
 
 ![Console](Images/JsonTest.png)
 
-```
+```json
 {
-    "name": "Chevrolet",
-    "color": "White"
+  "name": "Chevrolet",
+  "color": "White"
 }
 ```
 
@@ -23,9 +23,9 @@ This is a sample project showing how to accept body in format xml (application/x
 
 ![Console](Images/XmlTest.png)
 
-```
-<Car>
-    <Name>Chevrolet</Name>
-    <Color>White</Color>
-</Car>
+```xml
+    <Car>
+        <Name>Chevrolet</Name>
+        <Color>White</Color>
+    </Car>
 ```

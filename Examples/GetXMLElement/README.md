@@ -1,7 +1,7 @@
-## What is this project
+# 1. What is this project
 
-It is a small / simple project that shows how get specif elemnt into XML file.
+- It is a small / simple project that shows how get specif elemnt into XML file.
 
-## Project Type Console
+# 2. Project Type Console
 
-.NET 6.0
+- .NET 6.0

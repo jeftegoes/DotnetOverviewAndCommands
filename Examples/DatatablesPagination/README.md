@@ -4,7 +4,7 @@ It is a small/simple example that implements Datatables "server side", in this e
 
 # 2. Back-end
 
-.Net Core 5.0 Web Mvc/Api
+.NET 5.0 - ASP. NET MVC
 
 # 3. Front-end
 
