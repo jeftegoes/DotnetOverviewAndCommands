@@ -24,6 +24,7 @@
   - [10.2. Solution commands](#102-solution-commands)
   - [10.3. Aspnet codegenerator commands](#103-aspnet-codegenerator-commands)
 - [11. Tools](#11-tools)
+- [12. Reverse engineering](#12-reverse-engineering)
 
 # 1. What is C#
 
@@ -179,3 +180,7 @@
 # 11. Tools
 
 - `dotnet tool install --global dotnet-aspnet-codegenerator --version X.X.X`
+
+# 12. Reverse engineering
+
+- [AvaloniaILSpy](https://github.com/icsharpcode/AvaloniaILSpy)
